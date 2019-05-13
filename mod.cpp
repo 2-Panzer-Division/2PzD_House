@@ -1,0 +1,10 @@
+name = "2PzD House Mods";
+author = "Wilhelm Haas (2PzD)";
+description = "2PzD House - v1.0.0";
+overview = "This mod small in house mods used by 2PzD.";
+logo = "Images\logo.paa";
+logoOver = "Images\logo.paa";
+logoSmall = "Images\logo.paa";
+picture = "Images\logo.paa";
+tooltip = "2PzD House";
+action = "https://2pzd.net/";

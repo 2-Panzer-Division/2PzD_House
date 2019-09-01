@@ -13,6 +13,7 @@ class CfgPatches {
 
 class RscStandardDisplay;
 class RscDisplayMain : RscStandardDisplay {
+/*
     class Spotlight {
         class 2pzdServer {
             text = "2PzD Server"; // Text displayed on the square button, converted to upper-case
@@ -24,6 +25,7 @@ class RscDisplayMain : RscStandardDisplay {
             condition = "true"; // Condition for showing the spotlight
         };
     };
+*/
     class controls {
         class Spotlight1 { // : RscMainMenuSpotlight {
             idc = 1021;
@@ -834,6 +836,7 @@ class RscDisplayMain : RscStandardDisplay {
             shadow = 0;
             style = 16;
         };
+/*
         class SpotlightPrev {
             idc = 1060;
             text = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\spotlightPrev_ca.paa";
@@ -891,6 +894,7 @@ class RscDisplayMain : RscStandardDisplay {
             tooltipColorBox[] = {1, 1, 1, 1};
             tooltipColorShade[] = {0, 0, 0, 0.65};
         };
+*/
     };
 
     class ControlsBackground {
@@ -966,4 +970,31 @@ class RscDisplayMain : RscStandardDisplay {
             tooltipColorShade[] = {0, 0, 0, 0.65};
         };
     };
+};
+
+class CfgMainMenuSpotlight {
+    class 2pzdServer {
+        text = "2PzD Server"; // Text displayed on the square button, converted to upper-case
+        textIsQuote = 0; // 1 to add quotation marks around the text
+        picture = "\2pzd_spotlight\logo.paa"; // Square picture, ideally 512x512
+        //video = "\a3\Ui_f\Video\spotlight_1_Apex.ogv"; // Video played on mouse hover
+        action = "0 = [_this, 'IP.IP.IP.IP', '2302', 'K98'] execVM '\2pzd_spotlight\joinServer.sqf';";
+        actionText = "Join the 2PzD Server"; // Text displayed in top left corner of on-hover white frame
+        condition = "true"; // Condition for showing the spotlight
+    };
+    // These are referenced somewhere so they can't be deleted
+    class Orange_Campaign { condition = "false";};
+    class Tacops_Campaign_01 { condition = "false";};
+    delete ApexProtocol;
+    delete BootCamp;
+    delete Contact_Campaign;
+    delete EastWind;
+    delete Orange_CampaignGerman;
+    delete Orange_Showcase_IDAP;
+    delete Orange_Showcase_LoW;
+    delete Showcase_TankDestroyers;
+    delete Tacops_Campaign_02;
+    delete Tacops_Campaign_03;
+    delete Tanks_Campaign_01;
+    delete gm_campaign_01;
 };

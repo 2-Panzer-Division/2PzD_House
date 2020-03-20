@@ -44,13 +44,13 @@ class CfgWorlds {
         };
     };
 
-    class 2PzD_Rosche_DutchNames : WL_Rosche {
-        description = "Rosche (Dutch names)";
+    class 2PzD_Rosche_DutchNames : WL_Rosche { // This creates a new map, identical to Rosche except for the new names we choose
+        description = "Rosche (Dutch names)"; // This will be the name of the map in the editor
         class Names {
             class vill_jarlitz {
-                name = "Ommen";
-                // name = "Jarlitz";
-                position[] = {9217.66,7799.33};
+                name = "Bornebroek"; // This is the name that will show up on the map for this marker
+                // name = "Jarlitz"; // This is the original place name
+                position[] = {9217.66,7799.33}; // Don't change any of the other entries
                 type = "NameCity";
                 radiusA = 300.0;
                 radiusB = 300.0;
@@ -93,7 +93,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class town_oetzen {
-                name = "Kerkrade";
+                name = "Zandschel";
                 // name = "Oetzen";
                 position[] = {7380.67,10611.22};
                 type = "NameCityCapital";
@@ -165,7 +165,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class vill_weste {
-                name = "Os";
+                name = "Alkdaal";
                 // name = "Weste";
                 position[] = {9187.52,14754.92};
                 type = "NameCity";
@@ -219,7 +219,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class town_rosche {
-                name = "Terhuizemerhoven";
+                name = "Vraggelen";
                 // name = "Rosche";
                 position[] = {12622.2,6794.72};
                 type = "NameCityCapital";
@@ -345,7 +345,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class vill_neumuhle {
-                name = "Berghuis";
+                name = "Vroomshoop";
                 // name = "Neumuhle";
                 position[] = {11109.14,9821.9};
                 type = "NameCity";
@@ -354,7 +354,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class vill_probien {
-                name = "Chaamdijk";
+                name = "Terschede";
                 // name = "Probien";
                 position[] = {13054.23,11980.97};
                 type = "NameVillage";
@@ -480,7 +480,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class lake_olden {
-                name = "Julianaven";
+                name = "Gravenven";
                 // name = "Oldenstadter See";
                 position[] = {1580.31,6466.5};
                 type = "NameMarine";
@@ -597,7 +597,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class biogas_rosche {
-                name = "Royal Dutch Shell Storage";
+                name = "Henrik Valk Gas Storage";
                 // name = "BioGas Plant";
                 position[] = {13197.38,7914.86};
                 type = "NameLocal";
@@ -624,7 +624,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class waste_dump {
-                name = "Veld Afvalverwerking en Zn.";
+                name = "Koenraad Veld Afvalverwerking";
                 // name = "Waste Dump";
                 position[] = {13316.06,9521.24};
                 type = "NameLocal";
@@ -633,7 +633,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class klein_hesebeck {
-                name = "Vraggelen";
+                name = "Terhuizemerhoven";
                 // name = "Klein Hesebeck";
                 position[] = {3222.85,14473.9};
                 type = "NameCity";
@@ -669,7 +669,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class nateln {
-                name = "Doldersum";
+                name = "Hilverschoten";
                 // name = "Nateln";
                 position[] = {13081.2,5351.33};
                 type = "NameCity";
@@ -750,7 +750,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class woltersburg_sud {
-                name = "";
+                name = "";  // Intentionally blank
                 // name = "Woltersburg Sud";
                 position[] = {3449.38,6742.68};
                 type = "NameVillage";
@@ -786,7 +786,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class halligdorf {
-                name = "Hulst";
+                name = "Bramelo";
                 // name = "Halligdorf";
                 position[] = {882.39,1577.11};
                 type = "NameCity";
@@ -813,7 +813,7 @@ class CfgWorlds {
                 angle = 0.0;
             };
             class emmendorf {
-                name = "Emmen";
+                name = "Munnekezijl";
                 // name = "Emmendorf";
                 position[] = {314.24,11081.84};
                 type = "NameCity";
@@ -1000,6 +1000,62 @@ class CfgWorlds {
                 radiusA = 211.44;
                 radiusB = 135.55;
                 angle = 35.358;
+            };
+            class canal_1 {
+                name = "Julianavaart";
+                position[] = {1614.325,12278.97};
+                type = "NameMarine";
+                radiusA = 211.44;
+                radiusB = 135.55;
+                angle = 286;
+            };
+            class canal_2 {
+                name = "Julianavaart";
+                position[] = {328.017,8691.041};
+                type = "NameMarine";
+                radiusA = 211.44;
+                radiusB = 135.55;
+                angle = 278;
+            };
+            class canal_3 {
+                name = "Julianavaart";
+                position[] = {1315.817,5230.428};
+                type = "NameMarine";
+                radiusA = 211.44;
+                radiusB = 135.55;
+                angle = 66;
+            };
+            class canal_4 {
+                name = "Julianavaart";
+                position[] = {2372.052,1662.271};
+                type = "NameMarine";
+                radiusA = 211.44;
+                radiusB = 135.55;
+                angle = 76;
+            };
+            class schijtman_factory {
+                name = "Schijtman en Zn. Hondenvoer";
+                position[] = {6129.402,9926.526};
+                type = "NameLocal";
+                radiusA = 202.82;
+                radiusB = 135.55;
+                angle = 0.0;
+            };
+            class brewery {
+                name = "Ploeper Brewery";
+                position[] = {12804.302,7504.636};
+                type = "NameLocal";
+                radiusA = 202.82;
+                radiusB = 135.55;
+                angle = 0.0;
+            };
+            class refinery {
+                name = "Royal Dutch Shell Refinery";
+                position[] = {1403.590,5727.788};
+                type = "NameCity";
+                radiusA = 300.0;
+                radiusB = 300.0;
+                angle = 0.0;
             };
         };
     };

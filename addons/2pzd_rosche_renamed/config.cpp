@@ -10,20 +10,19 @@ class CfgPatches {
 };
 
 class CfgLocationTypes {
-    class ViewPoint;
-    class FedRoad071 : ViewPoint {
+    class FedRoad071 {
         color[] = {0,0,0,1};
         textSize = 0.06;
         size = 18;
         texture = "WW2\Core_t\IF_MapControl_t\mapkey_viewpoint_ca.paa";
     };
-    class FedRoad191 : ViewPoint {
+    class FedRoad191 {
         color[] = {0,0,0,1};
         textSize = 0.06;
         size = 18;
         texture = "WW2\Core_t\IF_MapControl_t\mapkey_viewpoint_ca.paa";
     };
-    class FedRoad493 : ViewPoint {
+    class FedRoad493 {
         color[] = {0,0,0,1};
         textSize = 0.06;
         size = 18;
@@ -36,9 +35,14 @@ class CfgWorldList {
 };
 
 class CfgWorlds {
-    class CAWorld;
+    class DefaultWorld;
+
+    class CAWorld : DefaultWorld {
+        class Grid;
+    };
+
     class WL_Rosche : CAWorld {
-        class Grid {
+        class Grid : Grid {
             offsetX = 0;
             offsetY = 15360;
         };

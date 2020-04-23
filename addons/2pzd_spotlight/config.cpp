@@ -978,7 +978,7 @@ class CfgMainMenuSpotlight {
         textIsQuote = 0; // 1 to add quotation marks around the text
         picture = "\2pzd_spotlight\logo.paa"; // Square picture, ideally 512x512
         //video = "\a3\Ui_f\Video\spotlight_1_Apex.ogv"; // Video played on mouse hover
-        action = "0 = [_this, 'IP.IP.IP.IP', '2302', 'K98'] execVM '\2pzd_spotlight\joinServer.sqf';";
+        action = "0 = [_this, 'IP.IP.IP.IP', 'PORT', 'Password'] execVM '\2pzd_spotlight\joinServer.sqf';";
         actionText = "Join the 2PzD Server"; // Text displayed in top left corner of on-hover white frame
         condition = "true"; // Condition for showing the spotlight
     };
@@ -989,6 +989,7 @@ class CfgMainMenuSpotlight {
     delete BootCamp;
     delete Contact_Campaign;
     delete EastWind;
+    delete OldMan;
     delete Orange_CampaignGerman;
     delete Orange_Showcase_IDAP;
     delete Orange_Showcase_LoW;

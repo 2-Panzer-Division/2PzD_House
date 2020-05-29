@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
-        <Key ID="STR_ACE_Medical_Give_Painkilllers">
+        <Key ID="STR_2PzD_ACE_Medical_Give_Painkilllers">
             <English>Give painkillers</English>
             <French>Donnez des analgésiques</French>
             <German>Schmerztabletten geben</German>
@@ -9,7 +9,7 @@
             <Polish>Podajcie środki przeciwbólowe</Polish>
             <Russian>Дайте обезболивающее</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_Giving_Painkilllers">
+        <Key ID="STR_2PzD_ACE_Medical_Giving_Painkilllers">
             <English>Giving painkillers</English>
             <French>Donner des analgésiques</French>
             <German>Schmerzmittel verabreichen</German>
@@ -17,7 +17,7 @@
             <Polish>Podawanie leków przeciwbólowych</Polish>
             <Russian>Давая обезболивающие</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Bandage_Basic_Desc_Short">
+        <Key ID="STR_2PzD_ACE_Medical_Treatment_Bandage_Basic_Desc_Short">
             <English>Best for all minor wounds and, when elastic bandages aren't available, to treat medium Scrapes, Crush wounds, and Cuts.</English>
             <French>Le meilleur choix pour traiter toutes les blessures mineures et, dans le cas où les bandes compressives ne sont pas disponibles, pour traiter les moyennes abrasions, les écrasements, et les coupures.</French>
             <German>Am besten geeignet für alle kleineren Wunden und, falls keine elastischen Bandagen zur Verfügung stehen, um mittlere Kratzer, Quetschverletzungen und Schnittwunden zu behandeln.</German>
@@ -33,7 +33,7 @@
             <Chinesesimp>用于覆盖伤口</Chinesesimp>
             <Chinese>用於覆蓋傷口</Chinese>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Bandage_Elastic_Desc_Short">
+        <Key ID="STR_2PzD_ACE_Medical_Treatment_Bandage_Elastic_Desc_Short">
             <English>Best for medium Scrapes, Crush wounds, and Cuts. Always better than a basic bandage for all minor wounds.</English>
             <French>Le meilleur choix pour traiter les moyennes abrasions, les écrasements et les coupures. Toujours meilleur que les pansements de bases pour toutes les blessures mineures.</French>
             <German>Am besten geeignet für mittlere Kratzer, Quetschverletzungen und Schnittwunden. Stets besser als einfache Bandagen für alle geringfügigen Wunden.</German>
@@ -49,7 +49,7 @@
             <Korean>붕대, 압박</Korean>
             <Spanish>Kit de vendaje (Elástico)</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
+        <Key ID="STR_2PzD_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Best for large Crush wounds and Cuts, and medium or large Avulsions, Lacerations, Velocity wounds, and Punctures.</English>
             <French>Le meilleur choix pour traiter les grands écrasements, les avulsions moyennes ou larges, les lacérations, les plaies pénétrantes et les perforations.</French>
             <German>Am besten geeignet für große Quetschverletzungen, Schnittwunden, mittlere und große Avulsionen, Risse, ballistische Wunden und Stichwunden.</German>
@@ -65,7 +65,7 @@
             <Korean>중형 또는 대형 상처를 채우고 출혈을 막기위해 쓰입니다</Korean>
             <Spanish>Se utiliza para vendar heridas medianas o grandes y detener el sangrado</Spanish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Painkillers_Desc_Short">
+        <Key ID="STR_2PzD_ACE_Medical_Treatment_Painkillers_Desc_Short">
             <English>Taken orally to treat mild pain. Safer than morphine, but much less effective.</English>
             <French>Pris par voie orale pour traiter les douleurs légères. Plus sûr que la morphine, mais beaucoup moins efficace.</French>
             <German>Wird oral eingenommen, um leichte Schmerzen zu behandeln. Sicherer als Morphium, aber viel weniger wirksam.</German>
@@ -73,7 +73,7 @@
             <Portuguese>Tomada oralmente para tratar dores leves. Mais seguro que a morfina, mas muito menos eficaz.</Portuguese>
             <Russian>Взято перорально, чтобы лечить легкую боль. Безопаснее морфина, но гораздо менее эффективно.</Russian>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_Painkillers_Desc_Use">
+        <Key ID="STR_2PzD_ACE_Medical_Treatment_Painkillers_Desc_Use">
             <English>Taken orally to treat mild pain. Safer than morphine, but much less effective.</English>
             <French>Pris par voie orale pour traiter les douleurs légères. Plus sûr que la morphine, mais beaucoup moins efficace.</French>
             <German>Wird oral eingenommen, um leichte Schmerzen zu behandeln. Sicherer als Morphium, aber viel weniger wirksam.</German>

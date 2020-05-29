@@ -693,6 +693,15 @@ class ace_medical_treatment {
             incompatibleMedication[] = {};
             viscosityChange = -10;
         };
+        class PainKillers {
+            painReduce = 0.1;
+            timeInSystem = 1200;
+            timeTillMaxEffect = 60;
+            maxDose = 25;
+            incompatibleMedication[] = {};
+            viscosityChange = 5;
+            // viscosityChange = -0.05; //from v3.12.6
+        };
         class Epinephrine {
             painReduce = 0;
             hrIncreaseLow[] = {10, 20};
@@ -712,15 +721,6 @@ class ace_medical_treatment {
             timeTillMaxEffect = 15;
             maxDose = 6;
             incompatibleMedication[] = {};
-        };
-        class PainKillers {
-            painReduce = 0.1;
-            timeInSystem = 1200;
-            timeTillMaxEffect = 60;
-            maxDose = 25;
-            incompatibleMedication[] = {};
-            viscosityChange = 5;
-            // viscosityChange = -0.05; //from v3.12.6
         };
     };
     class IV {

@@ -11,6 +11,26 @@ class CfgPatches {
     };
 }; // End CfgPatches
 
+/*
+[
+    configFile >> "CfgSurfaceCharacters",
+    true,
+    true,
+    true,
+    true,
+    [
+        "probability",
+        "names"
+    ],
+    true,
+    true,
+    true,
+    false,
+    true,
+    "2pzd_clutter_removal - CfgSurfaceCharacters"
+] call compile preprocessFileLineNumbers "dumpConfig.sqf";
+*/
+
 class CfgSurfaceCharacters {
     class Empty {
         probability[] = {};
@@ -47,7 +67,7 @@ class CfgSurfaceCharacters {
     class ForestPineClutter {
         probability[] = {};
         names[] = {};
-    };
+        };
     class DirtClutter {
         probability[] = {};
         names[] = {};
@@ -224,51 +244,91 @@ class CfgSurfaceCharacters {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantala_sammal_Character {
+    class tem_olhava_sammal_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantala_metsahiekka_Character {
+    class tem_olhava_pelto_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantala_pelto_Character {
+    class tem_olhava_hietikko_vaalea_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantala_hietikko_vaalea_Character {
+    class tem_olhava_hiekka_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantala_ruoho_Character {
+    class tem_olhava_ruoho_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantala_suo_Character {
+    class tem_olhava_suo_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantalaw_sammal_Character {
+    class tem_raatteentiew_sammal_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantalaw_metsahiekka_Character {
+    class tem_raatteentiew_metsahiekka_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantalaw_pelto_Character {
+    class tem_raatteentiew_hietikko_vaalea_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantalaw_hietikko_vaalea_Character {
+    class tem_raatteentiew_ruoho_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantalaw_ruoho_Character {
+    class tem_raatteentiew_suo_Character {
         probability[] = {};
         names[] = {};
     };
-    class tem_ihantalaw_suo_Character {
+    class tem_summaw_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summaw_metsahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summaw_hietikko_vaalea_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summaw_ruoho_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summaw_suo_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_vinjesvingen_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_vinjesvingen_metsahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_vinjesvingen_kallio_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_vinjesvingen_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_vinjesvingen_hietikko_vaalea_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_vinjesvingen_ruoho_Character {
         probability[] = {};
         names[] = {};
     };
@@ -305,6 +365,78 @@ class CfgSurfaceCharacters {
         names[] = {};
     };
     class ruha_suo_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summas_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summas_metsahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summas_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summas_hietikko_vaalea_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summas_ruoho_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_summas_suo_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaari_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaari_vaaleahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaari_kallio_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaari_hiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaari_suo_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaari_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaari_vesi_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaariw_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaariw_vaaleahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaariw_suo_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaariw_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_suursaariw_vesi_Character {
         probability[] = {};
         names[] = {};
     };
@@ -369,6 +501,114 @@ class CfgSurfaceCharacters {
         names[] = {};
     };
     class tem_kujari_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarus_forest_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarus_forest2_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarus_grass_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarus_grass2_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarus_grey_sand_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusd_forest_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusd_forest2_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusd_grass_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusd_grass2_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusd_grey_sand_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusw_forest_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusw_forest2_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusw_grass_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusw_grass2_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_chernarusw_grey_sand_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaww_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaww_metsahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaww_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaww_hietikko_vaalea_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaww_ruoho_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaww_suo_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalawww_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalawww_metsahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalawww_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalawww_hietikko_vaalea_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalawww_ruoho_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalawww_suo_Character {
         probability[] = {};
         names[] = {};
     };
@@ -705,6 +945,54 @@ class CfgSurfaceCharacters {
         names[] = {};
     };
     class trw_seabed_clutter {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantala_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantala_metsahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantala_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantala_hietikko_vaalea_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantala_ruoho_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantala_suo_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaw_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaw_metsahiekka_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaw_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaw_hietikko_vaalea_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaw_ruoho_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class tem_ihantalaw_suo_Character {
         probability[] = {};
         names[] = {};
     };

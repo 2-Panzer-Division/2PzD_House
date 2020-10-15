@@ -19,7 +19,7 @@ class RscDisplayMain : RscStandardDisplay {
 /*
     class Spotlight {
         class 2pzdServer {
-            action = "0 = [_this, 'IP.IP.IP.IP', 'PORT', 'Password'] execVM '\2pzd_spotlight\joinServer.sqf';";
+            action = "connectToServer ['IP.IP.IP.IP', PORT, 'Password']";
             actionText = "Join the 2PzD Server"; // Text displayed in top left corner of on-hover white frame
             condition = "true"; // Condition for showing the spotlight
             picture = "\2pzd_spotlight\logo.paa"; // Square picture, ideally 512x512
@@ -526,7 +526,7 @@ class RscDisplayMain : RscStandardDisplay {
 
 class CfgMainMenuSpotlight {
     class 2pzdServer {
-        action = "0 = [_this, 'IP.IP.IP.IP', 'PORT', 'Password'] execVM '\2pzd_spotlight\joinServer.sqf';";
+        action = "connectToServer ['IP.IP.IP.IP', PORT, 'Password']";
         actionText = "Join the 2PzD Server"; // Text displayed in top left corner of on-hover white frame
         condition = "true"; // Condition for showing the spotlight
         picture = "\2pzd_spotlight\logo.paa"; // Square picture, ideally 512x512
@@ -550,4 +550,5 @@ class CfgMainMenuSpotlight {
     delete Tacops_Campaign_03;
     delete Tanks_Campaign_01;
     delete gm_campaign_01;
+    delete SP_FD14;
 };

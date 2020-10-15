@@ -10,7 +10,7 @@ class ace_medical_treatment_actions {
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         callbackSuccess = "ace_medical_treatment_fnc_medication";
         category = "medication";
-        condition = "";
+        condition = "!(_patient getVariable ['ACE_isUnconscious',false])";
         icon = "2pzd_ace_customization\ui\icons\painkillers.paa";
         items[] = {"ACE_painkillers"};
         litter[] = {{"ACE_MedicalLitter_painkillers"}};

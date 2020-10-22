@@ -67,7 +67,7 @@ class CfgSurfaceCharacters {
     class ForestPineClutter {
         probability[] = {};
         names[] = {};
-        };
+    };
     class DirtClutter {
         probability[] = {};
         names[] = {};
@@ -504,6 +504,30 @@ class CfgSurfaceCharacters {
         probability[] = {};
         names[] = {};
     };
+    class org_forest_grassy {
+        probability[] = {};
+        names[] = {};
+    };
+    class org_plain_grassy {
+        probability[] = {};
+        names[] = {};
+    };
+    class org_fieldy {
+        probability[] = {};
+        names[] = {};
+    };
+    class org_grassy {
+        probability[] = {};
+        names[] = {};
+    };
+    class org_mudy {
+        probability[] = {};
+        names[] = {};
+    };
+    class org_dirty {
+        probability[] = {};
+        names[] = {};
+    };
     class tem_chernarus_forest_Character {
         probability[] = {};
         names[] = {};
@@ -609,6 +633,26 @@ class CfgSurfaceCharacters {
         names[] = {};
     };
     class tem_ihantalawww_suo_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class 23pzd_kuban_forest_pine_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class 23pzd_kuban_field_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class 23pzd_kuban_dirt_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class 23pzd_kuban_cutfield_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class 23pzd_kuban_green_grass_Character {
         probability[] = {};
         names[] = {};
     };

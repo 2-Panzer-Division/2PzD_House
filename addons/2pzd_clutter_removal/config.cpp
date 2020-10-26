@@ -636,6 +636,34 @@ class CfgSurfaceCharacters {
         probability[] = {};
         names[] = {};
     };
+    class vt7_sammal_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class vt7_hietikko2_gravel_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class vt7_pelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class vt7_hakkuu2_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class vt7_ruoho_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class vt7_viljapelto_Character {
+        probability[] = {};
+        names[] = {};
+    };
+    class vt7_airfield_Character {
+        probability[] = {};
+        names[] = {};
+    };
     class 23pzd_kuban_forest_pine_Character {
         probability[] = {};
         names[] = {};

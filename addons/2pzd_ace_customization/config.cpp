@@ -11,6 +11,7 @@ class CfgPatches {
         requiredAddons[] = { // Add all required Ace Medical stuff as well.
             "Haas_WWII_Rebalance",
             // "ace_spectator",
+            "ace_frag",
             "ace_medical",
             "ace_medical_ai",
             "ace_medical_blood",
@@ -27,7 +28,13 @@ class CfgPatches {
 }; // End CfgPatches
 
 #include "ACE_Medical_Treatment.hpp"
+
 #include "ACE_Medical_Treatment_Actions.hpp"
+
+#include "CfgAmmo.hpp"
+
 #include "CfgReplacementItems.hpp"
+
 #include "CfgVehicles.hpp"
+
 #include "CfgWeapons.hpp"

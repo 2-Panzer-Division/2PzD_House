@@ -6,7 +6,8 @@ class CfgPatches {
         requiredAddons[] = {
             "A3_Ui_F",
             "Extended_EventHandlers",
-            "CBA_MAIN"
+            "CBA_MAIN",
+            "ACE_Common"
         };
         requiredVersion = 0.1;
         units[] = {};

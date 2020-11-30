@@ -14,6 +14,7 @@ _groupId = "";
         private _units = units _x;
         private _grpText = "";
         private _color = "#FFFFFF";
+        private _unitNumber = 0;
 
         switch (_groupSide) do {
              case west : {_color = "#0080FF"};
@@ -28,6 +29,7 @@ _groupId = "";
         {
             if ((alive _x) && ((isMultiplayer) && {_x in playableUnits} || ((!isMultiplayer) && {_x in switchableUnits}))) then {
                 _show = true;
+                _unitNumber = _unitNumber +  1;
 
                 // Get unit description
                 private _name = "";
@@ -54,7 +56,7 @@ _groupId = "";
                         if (isNil _unitRole) then {_unitRole = "Leader"};
                         if (_unitRole == "") then {_unitRole = "Leader"};
                     };
-                    _name = format ["<font color='%3' size='16'>%1 - %2</font><br/>", _unitRole, name _x, _color];
+                    _name = format ["<font color='%1' size='16'>%2. %3 | %4</font><br/>", _color, _unitNumber, _unitRole, name _x];
                     _grpText = format ["<font color='%3' size='18'>%1%2%</font><br/><br/>", _grpText, _groupID, _color];
                     // diag_log _groupID;
                     // diag_log _name;
@@ -67,13 +69,13 @@ _groupId = "";
                         if (isNil _unitRole) then {_unitRole = "Group Member"};
                         if (_unitRole == "") then {_unitRole = "Group Member"};
                     };
-                    _name = format ["<font size='16'>%1 | %2</font><br/>", _unitRole, name _x];
+                    _name = format ["<font size='16'>%1. %2 | %3</font><br/>", _unitNumber, _unitRole, name _x];
                     // diag_log _name;
                     // diag_log _unitRole;
                 };
 
                 // Creating briefing text
-                _grpText = _grpText + format ["%1%2 kg / %3 lbs<br/><br/>", _name, [_x] call ace_common_fnc_getWeight, [_x, true] call ace_common_fnc_getWeight];
+                _grpText = _grpText + format ["%1%2 | %3<br/><br/>", _name, [_x] call ace_common_fnc_getWeight, [_x, true] call ace_common_fnc_getWeight];
 
                 // Loadouts
 
@@ -140,12 +142,11 @@ _groupId = "";
                 };
 
                 // Assigned Items
-                private _items = assignedItems _x - [""];
+                private _assignedItems = assignedItems _x - [""];
                 // diag_log _items;
-                if (count _items > 0) then {
-                    while {!(_items isEqualTo [])} do {
-                        private _item = _items select 0;
-                        private _itemCount = {_x == _item} count _items;
+                if (count _assignedItems > 0) then {
+                    while {!(_assignedItems isEqualTo [])} do {
+                        private _item = _assignedItems select 0;
                         private _conf = configFile >> "CfgWeapons" >> _item;
                         private _name = getText(_conf >> "displayName");
                         // diag_log _name;
@@ -156,7 +157,7 @@ _groupId = "";
                         if (_image == ".paa") then {_image = "P:\a3\data_f\Unknown_object.paa"};
                         // diag_log _image;
                         _grpText = _grpText + format ["<img image='%1' width='50' height='50'/><execute expression='systemChat ""Item: %2""'>*</execute>  ", _image, _name];
-                        _items = _items - [_item];
+                        _assignedItems = _assignedItems - [_item];
                     };
                 };
                 _grpText = _grpText + "<br/>";
@@ -178,10 +179,10 @@ _groupId = "";
 
                 // Primary weapon
                 if (_weaponPrimary != "") then {
-                    private _i = 0;
                     private _conf = configFile >> "CfgWeapons" >> _weaponPrimary;
                     private _name = getText(_conf >> "displayName");
                     private _image = getText(_conf >> "picture");
+                    private _itemIndex = 0;
                     // diag_log _name;
                     // diag_log _image;
 
@@ -191,55 +192,57 @@ _groupId = "";
                     _grpText = _grpText + format ["Primary: %1<br/><img image='%2' width='100' height='50'/>", _name, _image];
 
                     {
-                        _weaponItem = _weaponPrimaryItems select _i;
+                        _weaponItem = _weaponPrimaryItems select _itemIndex;
                         // diag_log _weaponItem;
                         if (_weaponItem != "") then {
                             private _conf = configFile >> "CfgWeapons" >> _weaponItem;
+                            private _name = getText(_conf >> "displayName");
                             private _image = getText(_conf >> "picture");
                             if ((_image find ".paa") == -1) then {_image = _image + ".paa"};
                             if (_image == ".paa") then {_image = "P:\a3\data_f\Unknown_object.paa"};
-                            _grpText = _grpText + format ["<img image='%1' width='50' height='50'/>", _image];
+                            _grpText = _grpText + format ["<img image='%1' width='50' height='50'/><execute expression='systemChat ""Item: %2""'>*</execute>  ", _image, _name];
                         };
-                        _i = _i + 1;
+                        _itemIndex = _itemIndex + 1;
                     } forEach _weaponPrimaryItems;
                     _grpText = _grpText + "<br/>";
                 };
 
                 // Handgun
                 if (_weaponHandgun != "") then {
-                    private _i = 0;
                     private _conf = configFile >> "CfgWeapons" >> _weaponHandgun;
                     private _name = getText(_conf >> "displayName");
                     private _image = getText(_conf >> "picture");
+                    private _itemIndex = 0;
                     // diag_log _name;
                     // diag_log _image;
 
                     if ((_image find ".paa") == -1) then {_image = _image + ".paa"};
                     if (_image == ".paa") then {_image = "P:\a3\data_f\Unknown_object.paa"};
 
-                    _grpText = _grpText + format ["Handgun: %1<br/><img image='%2' width='50' height='50'/>", _name, _image];
+                    _grpText = _grpText + format ["Handgun: %1<br/><img image='%2' width='75' height='50'/>", _name, _image];
 
                     {
-                        _weaponItem = _weaponHandgunItems select _i;
+                        _weaponItem = _weaponHandgunItems select _itemIndex;
                         // diag_log _weaponItem;
                         if (_weaponItem != "") then {
                             private _conf = configFile >> "CfgWeapons" >> _weaponItem;
+                            private _name = getText(_conf >> "displayName");
                             private _image = getText(_conf >> "picture");
                             if ((_image find ".paa") == -1) then {_image = _image + ".paa"};
                             if (_image == ".paa") then {_image = "P:\a3\data_f\Unknown_object.paa"};
-                            _grpText = _grpText + format ["<img image='%1' width='50' height='50'/>", _image];
+                            _grpText = _grpText + format ["<img image='%1' width='50' height='50'/><execute expression='systemChat ""Item: %2""'>*</execute>  ", _image, _name];
                         };
-                        _i = _i + 1;
+                        _itemIndex = _itemIndex + 1;
                     } forEach _weaponHandgunItems;
                     _grpText = _grpText + "<br/>";
                 };
 
                 // Secondary
                 if (_weaponLauncher != "") then {
-                    private _i = 0;
                     private _conf = configFile >> "CfgWeapons" >> _weaponLauncher;
                     private _name = getText(_conf >> "displayName");
                     private _image = getText(_conf >> "picture");
+                    private _itemIndex = 0;
                     // diag_log _name;
                     // diag_log _image;
 
@@ -249,31 +252,42 @@ _groupId = "";
                     _grpText = _grpText + format ["Launcher: %1<br/><img image='%2' width='100' height='50'/>", _name, _image];
 
                     {
-                        _weaponItem = _weaponLauncherItems select _i;
+                        _weaponItem = _weaponLauncherItems select _itemIndex;
                         // diag_log _weaponItem;
                         if (_weaponItem != "") then {
                             private _conf = configFile >> "CfgWeapons" >> _weaponItem;
+                            private _name = getText(_conf >> "displayName");
                             private _image = getText(_conf >> "picture");
                             if ((_image find ".paa") == -1) then {_image = _image + ".paa"};
                             if (_image == ".paa") then {_image = "P:\a3\data_f\Unknown_object.paa"};
-                            _grpText = _grpText + format ["<img image='%1' width='50' height='50'/>", _image];
+                            _grpText = _grpText + format ["<img image='%1' width='50' height='50'/><execute expression='systemChat ""Item: %2""'>*</execute>  ", _image, _name];
                         };
-                        _i = _i + 1;
+                        _itemIndex = _itemIndex + 1;
                     } forEach _weaponLauncherItems;
                     _grpText = _grpText + "<br/>";
                 };
 
                 _grpText = _grpText + "Magazines and Items:<br/>";
 
-                // Magazines
-                private _magazines = (magazines _x - [""]) + (primaryWeaponMagazine _x - [""]) + (handgunMagazine _x - [""]) + (secondaryWeaponMagazine _x - [""]);
+                // Magazines & Items
+                private _magazines = (primaryWeaponMagazine _x - [""]) + (handgunMagazine _x - [""]) + (secondaryWeaponMagazine _x - [""]) + (magazines _x - [""]);
                 // diag_log _magazines;
                 private _items = (uniformItems _x - [""]) + (vestItems _x - [""]) + (backpackItems _x - [""]);
                 // diag_log _items;
+                private _uniqueItems = [];
+                {
+                    _uniqueItems pushBackUnique _x;
+                } forEach _items;
+                // diag_log _uniqueItems;
+                private _uniqueItemsCount = count _uniqueItems;
+                // diag_log _uniqueItemsCount;
+                private _itemRowLength = 14;
+                // diag_log _itemRowLength;
                 private _items = _items - _magazines;
                 // diag_log _items;
+                private _itemIndex = 0;
 
-                private _i = 0;
+                // Magazines
                 if (count _magazines > 0) then {
                     while {!(_magazines isEqualTo [])} do {
                         private _magazine = _magazines select 0;
@@ -285,18 +299,17 @@ _groupId = "";
                         // diag_log _image;
                         if ((_image find ".paa") == -1) then {_image = _image + ".paa"};
                         // diag_log _image;
-                        if (_image == ".paa") then {_image = "P:\a3\data_f\Unknown_object.paa"};
+                        if (_image == ".paa") then {_image = "\a3\data_f\Unknown_object.paa"};
                         // diag_log _image;
                         _grpText = _grpText + format ["<img image='%1' width='32' height='32'/><execute expression='systemChat ""Item: %2""'>x%3</execute>  ", _image, _name, _itemCount];
                         _magazines = _magazines - [_magazine];
                         // diag_log _magazines;
-                        _i = _i + 1;
-                        if ((_i mod 16) == 0) then {_grpText = _grpText + "<br/>";};
+                        _itemIndex = _itemIndex + 1;
+                        if ((_itemIndex mod _itemRowLength) == 0) then {_grpText = _grpText + "<br/>";};
                     };
                 };
 
                 // Items
-                // diag_log _items;
                 if (count _items > 0) then {
                     while {!(_items isEqualTo [])} do {
                         private _item = _items select 0;
@@ -308,12 +321,12 @@ _groupId = "";
                         // diag_log _image;
                         if ((_image find ".paa") == -1) then {_image = _image + ".paa"};
                         // diag_log _image;
-                        if (_image == ".paa") then {_image = "P:\a3\data_f\Unknown_object.paa"};
+                        if (_image == ".paa") then {_image = "\a3\data_f\Unknown_object.paa"};
                         // diag_log _image;
                         _grpText = _grpText + format ["<img image='%1' width='32' height='32'/><execute expression='systemChat ""Item: %2""'>x%3</execute>  ", _image, _name, _itemCount];
                         _items = _items - [_item];
-                        _i = _i + 1;
-                        if ((_i mod 16) == 0) then {_grpText = _grpText + "<br/>";};
+                        _itemIndex = _itemIndex + 1;
+                        if ((_itemIndex mod _itemRowLength) == 0) then {_grpText = _grpText + "<br/>";};
                     };
                 };
 

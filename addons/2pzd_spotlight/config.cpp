@@ -535,8 +535,10 @@ class CfgMainMenuSpotlight {
         //video = "\a3\Ui_f\Video\spotlight_1_Apex.ogv"; // Video played on mouse hover, ideally 512x512
     };
     // These are referenced somewhere so they can't be deleted
-    class Orange_Campaign { condition = "false";};
-    class Tacops_Campaign_01 { condition = "false";};
+    class AoW_Showcase_Future {condition = "false";};
+    class Orange_Campaign {condition = "false";};
+    class Tacops_Campaign_01 {condition = "false";};
+    delete AoW_Showcase_AoW;
     delete ApexProtocol;
     delete BootCamp;
     delete Contact_Campaign;
